@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Workbook: Culture, Time, and Employees | Business Ethics Ch. 5–6</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --navy:#14213D; --navy2:#2A3D66; --gold:#C9A227; --goldt:#F6EDCF;
+  --bg:#F4F6F9; --card:#FFFFFF; --text:#1F2937; --muted:#5B6472; --line:#D5DBE5;
+  --green:#2F6B4F; --greent:#E2EFE8; --red:#9B2C2C; --redt:#F6E3E3; --tint:#E4E9F2;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth; scroll-padding-top:70px}
+body{margin:0;background:var(--bg);color:var(--text);font:18px/1.6 "Source Sans 3","Segoe UI",Arial,sans-serif}
+h1,h2,h3{font-family:Montserrat,"Segoe UI",Arial,sans-serif;color:var(--navy);line-height:1.25}
+header{background:var(--navy);color:#fff;padding:36px 20px 28px}
+.wrap{max-width:860px;margin:0 auto;padding:0 20px}
+header h1{color:#fff;font-size:clamp(26px,4vw,36px);margin:4px 0 6px}
+header p{margin:0;color:#D6DCE8}
+header .course{color:var(--gold);font-weight:700}
+.id{display:grid;grid-template-columns:2fr 1fr;gap:12px;margin-top:20px}
+.id label{color:#D6DCE8;font-size:15px}
+.id input{background:#fff}
+nav{position:sticky;top:0;z-index:10;background:#fff;border-bottom:1px solid var(--line)}
+nav .wrap{display:flex;gap:6px;align-items:center;overflow-x:auto;padding-top:10px;padding-bottom:10px}
+nav a{white-space:nowrap;text-decoration:none;color:var(--navy);font-weight:600;font-size:15px;padding:5px 10px;border-radius:6px}
+nav a:hover,nav a:focus-visible{background:var(--tint)}
+nav .lesson{background:var(--navy);color:#fff}
+nav .lesson:hover{background:var(--navy2)}
+nav .spacer{flex:1}
+button{font:600 15px "Source Sans 3",Arial,sans-serif;border:0;border-radius:6px;padding:8px 14px;cursor:pointer}
+.btn-gold{background:var(--gold);color:var(--navy)}
+.btn-navy{background:var(--navy);color:#fff}
+.btn-ghost{background:transparent;color:var(--muted);border:1px solid var(--line)}
+button:focus-visible,input:focus-visible,textarea:focus-visible,select:focus-visible,a:focus-visible{outline:3px solid var(--gold);outline-offset:2px}
+main{padding:24px 0 60px}
+.lesson-head{margin:36px 0 8px;padding:14px 18px;background:var(--navy);color:#fff;border-radius:10px}
+.lesson-head h2{color:#fff;margin:0;font-size:22px}
+.lesson-head p{margin:2px 0 0;color:var(--gold);font-weight:600}
+section.part{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:22px 22px 18px;margin:18px 0}
+.part h3{margin:0 0 4px;font-size:20px}
+.part .task{margin:0 0 14px;color:var(--muted)}
+.help{font-size:15px;color:var(--muted);margin:2px 0 0}
+.tf{display:grid;grid-template-columns:1fr auto;gap:8px 16px;align-items:center;margin:8px 0;padding:8px 10px;border:1px solid var(--line);border-radius:8px}
+.tf p{margin:0}
+.tag{display:inline-block;background:var(--goldt);color:var(--navy);font-weight:700;font-size:14px;border-radius:4px;padding:1px 8px;margin-right:6px}
+label{display:block;font-weight:600;margin:12px 0 4px}
+input[type=text],input[type=number],textarea,select{width:100%;font:inherit;color:var(--text);border:1px solid var(--line);border-radius:6px;padding:8px 10px;background:#FBFCFD}
+textarea{min-height:64px;resize:vertical}
+.row{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.match{display:grid;grid-template-columns:1fr 210px;gap:8px 14px;align-items:center}
+.match p{margin:0}
+.reading{background:var(--tint);border-radius:8px;padding:14px 16px;margin-bottom:12px}
+.reading p{margin:0 0 10px}.reading p:last-child{margin:0}
+.bank{display:flex;flex-wrap:wrap;gap:6px;margin:0 0 12px}
+.bank span{background:var(--goldt);border-radius:4px;padding:2px 8px;font-weight:600;font-size:15px}
+.gap{display:grid;grid-template-columns:28px 1fr;gap:4px 8px;margin-bottom:10px;align-items:start}
+.gap .n{font-weight:700;color:var(--navy);padding-top:8px}
+.gap p{margin:0 0 4px}
+.mc{margin:10px 0}
+.mc p{margin:0 0 4px;font-weight:600}
+.mc label{display:flex;gap:8px;font-weight:400;margin:4px 0;cursor:pointer}
+.mc input{margin-top:6px}
+table{width:100%;border-collapse:collapse;margin:8px 0 14px;font-size:16px}
+th,td{text-align:left;padding:6px 8px;border-bottom:1px solid var(--line)}
+th{color:var(--navy)}
+td:first-child{font-weight:600}
+.check-row{display:flex;gap:10px;align-items:center;margin-top:14px;flex-wrap:wrap}
+.score{font-weight:700}
+.ok{border-color:var(--green)!important;background:var(--greent)!important}
+.bad{border-color:var(--red)!important;background:var(--redt)!important}
+.fb{display:none;font-size:15px;margin:4px 0 0;padding:6px 10px;border-radius:6px}
+.fb.show{display:block}
+.fb.good{background:var(--greent);color:var(--green)}
+.fb.wrong{background:var(--redt);color:var(--red)}
+.claim{border:1px solid var(--line);border-radius:8px;padding:10px 14px;margin:10px 0}
+.claim .ad{font-style:italic;margin:0 0 6px}
+.choices{display:flex;gap:18px}
+.choices label{display:flex;gap:6px;font-weight:600;margin:0;cursor:pointer}
+.scale{display:grid;grid-template-columns:1fr repeat(4,44px);gap:6px;align-items:center;margin:6px 0}
+.scale span{text-align:center;font-weight:700;color:var(--navy)}
+.scale input{justify-self:center;width:18px;height:18px}
+.saved{font-size:14px;color:var(--muted)}
+footer{text-align:center;color:var(--muted);font-size:14px;padding:20px}
+@media (max-width:640px){.row,.id{grid-template-columns:1fr}.match{grid-template-columns:1fr}.match select{margin-bottom:8px}}
+@media print{
+  nav,.check-row,footer button{display:none!important}
+  body{background:#fff;font-size:13px}
+  header{background:#fff;color:#000;padding:0 0 10px;border-bottom:2px solid #14213D}
+  header h1{color:#14213D}header p,.id label{color:#000}
+  section.part{break-inside:avoid;border:1px solid #bbb}
+  .lesson-head{background:#fff;color:#14213D;border:2px solid #14213D}
+  .lesson-head h2{color:#14213D}
+  textarea{min-height:0;height:auto}
+  .fb{display:none!important}
+}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+<header><div class="wrap">
+<p class="course">Business Ethics | Chapters 5–6</p>
+<h1>Culture, Time, and What Employers Owe Employees</h1>
+<p>Your answers save in this browser. At the end, click Print and choose “Save as PDF”.</p>
+<div class="id"><div><label for="name">Name</label><input type="text" id="name" autocomplete="name"></div>
+<div><label for="date">Date</label><input type="text" id="date" placeholder="MM/DD/YYYY"></div></div>
+</div></header>
+<nav aria-label="Workbook parts"><div class="wrap">
+<a class="lesson" href="#lesson1">Lesson 1</a><a href="#A">A</a><a href="#B">B</a><a href="#C">C</a><a href="#D">D</a><a href="#E">E</a><a href="#F">F</a><a href="#G">G</a><a href="#H">H</a><a class="lesson" href="#lesson2">Lesson 2</a><a href="#I">I</a><a href="#J">J</a><a href="#K">K</a><a href="#L">L</a><a href="#M">M</a><a href="#N">N</a><a href="#O">O</a><a href="#P">P</a><a href="#Q">Q</a><a href="#R">R</a><a href="#S">S</a>
+<span class="spacer"></span><span class="saved" id="saved" aria-live="polite"></span>
+<button class="btn-navy" onclick="window.print()">Print / PDF</button></div></nav>
+<main class="wrap">
+<div class="lesson-head" id="lesson1"><h2>Lesson 1: Culture, time, and business ethics</h2><p>Chapter 5 | Parts A–H</p></div>
+<section class="part" id="A"><h3><span class="tag">Part A</span>Vocabulary 1</h3><p class="task">Choose the correct word. Then click Check.</p><div class="match"><p>1. the ideas, habits, and beliefs of a group</p><select id="a1" data-answer="culture"></select><p>2. a normal habit in a place (e.g. bowing)</p><select id="a2" data-answer="custom"></select><p>3. something you believe is important</p><select id="a3" data-answer="value"></select><p>4. change to fit a new place</p><select id="a4" data-answer="adapt"></select><p>5. secret money to get an unfair advantage</p><select id="a5" data-answer="bribe"></select><p>6. dishonest actions by people with power</p><select id="a6" data-answer="corruption"></select><p>7. the world working as one big market</p><select id="a7" data-answer="globalization"></select><p>8. changing a product for a local market</p><select id="a8" data-answer="localization"></select></div><div class="check-row"><button class="btn-gold" onclick="checkPart('A')">Check</button><span class="score" id="scoreA"></span></div></section>
+<section class="part" id="B"><h3><span class="tag">Part B</span>Two ways we learn culture</h3><p class="task">Is it enculturation or acculturation? Then click Check.</p><div class="match"><p>1. A child learns to bow to older people.</p><select id="b1" data-answer="e"><option value="">Choose…</option><option value="e">Enculturation (my own culture)</option><option value="a">Acculturation (a new culture)</option></select><p>2. A Korean student in the U.S. learns to call teachers by their first name.</p><select id="b2" data-answer="a"><option value="">Choose…</option><option value="e">Enculturation (my own culture)</option><option value="a">Acculturation (a new culture)</option></select><p>3. A child learns to eat with chopsticks at home.</p><select id="b3" data-answer="e"><option value="">Choose…</option><option value="e">Enculturation (my own culture)</option><option value="a">Acculturation (a new culture)</option></select><p>4. A Brazilian worker in Germany learns to always arrive early.</p><select id="b4" data-answer="a"><option value="">Choose…</option><option value="e">Enculturation (my own culture)</option><option value="a">Acculturation (a new culture)</option></select></div><div class="check-row"><button class="btn-gold" onclick="checkPart('B')">Check</button><span class="score" id="scoreB"></span></div><label for="b5">One new habit I learned in the U.S.</label><input type="text" id="b5" placeholder="In the U.S., I learned to…"></section>
+<section class="part" id="C"><h3><span class="tag">Part C</span>A real case: Petrobras, Brazil</h3><p class="task">Read the text. True or false? Then click Check.</p><div class="reading"><p>Petrobras is Brazil’s big oil company. The government owns most of it. Some managers took bribes from building companies. In return, those companies got big contracts. An investigation called “Operation Car Wash” started in 2014. Many business leaders and politicians were investigated. Today, many Brazilians still have less trust in government and business.</p></div><div><div class="tf mc" data-answer="t"><p>1. Petrobras is an oil company.</p><div class="choices"><label><input type="radio" name="c1" value="t"> True</label><label><input type="radio" name="c1" value="f"> False</label></div></div><div class="tf mc" data-answer="t"><p>2. Some managers took bribes.</p><div class="choices"><label><input type="radio" name="c2" value="t"> True</label><label><input type="radio" name="c2" value="f"> False</label></div></div><div class="tf mc" data-answer="f"><p>3. The investigation started in 2020.</p><div class="choices"><label><input type="radio" name="c3" value="t"> True</label><label><input type="radio" name="c3" value="f"> False</label></div></div><div class="tf mc" data-answer="t"><p>4. The case hurt people’s trust.</p><div class="choices"><label><input type="radio" name="c4" value="t"> True</label><label><input type="radio" name="c4" value="f"> False</label></div></div></div><div class="check-row"><button class="btn-gold" onclick="checkPart('C')">Check</button><span class="score" id="scoreC"></span></div><label for="c5">Who was hurt?</label><input type="text" id="c5" placeholder="…were hurt because…"></section>
+<section class="part" id="D"><h3><span class="tag">Part D</span>Is bribery culture or a crime?</h3><div class="mc"><p>Does “everyone does it” make a bribe OK?</p><div class="choices" style="flex-wrap:wrap"><label><input type="radio" name="d1" value="yes"> Yes</label><label><input type="radio" name="d1" value="no"> No</label></div></div><label for="d2">Why?</label><input type="text" id="d2" placeholder="I think it is (not) OK because…"><label for="d3">One way a company can stop bribes</label><input type="text" id="d3" placeholder="A company can…"></section>
+<section class="part" id="E"><h3><span class="tag">Part E</span>Ethics change over time</h3><div class="mc"><p>Which one changed the most?</p><div class="choices" style="flex-wrap:wrap"><label><input type="radio" name="e1" value="fur coats"> Fur coats</label><label><input type="radio" name="e1" value="makeup tests on animals"> Makeup tests on animals</label><label><input type="radio" name="e1" value="tiger zoos"> Tiger zoos</label></div></div><label for="e2">Something that was OK in the past but is not OK now</label><input type="text" id="e2" placeholder=""><label for="e3">Something that is OK now but may be wrong in 50 years</label><input type="text" id="e3" placeholder="In 50 years, people will think…"></section>
+<section class="part" id="F"><h3><span class="tag">Part F</span>What is the purpose of a business?</h3><p class="task">Which idea does each sentence show? Then click Check.</p><div class="match"><p>1. “Our only goal is more money for our owners.”</p><select id="f1" data-answer="s"><option value="">Choose…</option><option value="s">Shareholder primacy (old idea)</option><option value="k">Care for all stakeholders (newer idea)</option></select><p>2. “We pay fair wages and help our town.”</p><select id="f2" data-answer="k"><option value="">Choose…</option><option value="s">Shareholder primacy (old idea)</option><option value="k">Care for all stakeholders (newer idea)</option></select><p>3. “Cut workers’ pay if it raises the stock price.”</p><select id="f3" data-answer="s"><option value="">Choose…</option><option value="s">Shareholder primacy (old idea)</option><option value="k">Care for all stakeholders (newer idea)</option></select><p>4. “We listen to customers, workers, and the community.”</p><select id="f4" data-answer="k"><option value="">Choose…</option><option value="s">Shareholder primacy (old idea)</option><option value="k">Care for all stakeholders (newer idea)</option></select></div><div class="check-row"><button class="btn-gold" onclick="checkPart('F')">Check</button><span class="score" id="scoreF"></span></div><div class="mc"><p>My opinion: which idea is better?</p><div class="choices" style="flex-wrap:wrap"><label><input type="radio" name="f5" value="old idea"> Old idea</label><label><input type="radio" name="f5" value="newer idea"> Newer idea</label><label><input type="radio" name="f5" value="a mix"> A mix</label></div></div></section>
+<section class="part" id="G"><h3><span class="tag">Part G</span>McDonald’s around the world</h3><p class="task">Match the food to the country. Then click Check.</p><div class="match"><p>1. Ebi Filet-O (shrimp burger)</p><select id="g1" data-answer="japan"><option value="">Choose…</option><option value="india">India</option><option value="japan">Japan</option><option value="me">Middle East</option></select><p>2. McSpicy Paneer (cheese, no beef)</p><select id="g2" data-answer="india"><option value="">Choose…</option><option value="india">India</option><option value="japan">Japan</option><option value="me">Middle East</option></select><p>3. McArabia (chicken in flat bread)</p><select id="g3" data-answer="me"><option value="">Choose…</option><option value="india">India</option><option value="japan">Japan</option><option value="me">Middle East</option></select><p>4. Changing a product for a local culture is…</p><select id="g4" data-answer="loc"><option value="">Choose…</option><option value="glob">globalization</option><option value="loc">localization</option></select></div><div class="check-row"><button class="btn-gold" onclick="checkPart('G')">Check</button><span class="score" id="scoreG"></span></div><h3 style="margin-top:22px;font-size:18px">Our new menu item</h3><div class="row"><div><label for="g5">Country</label><input type="text" id="g5" placeholder=""></div><div><label for="g6">Food name</label><input type="text" id="g6" placeholder=""></div></div><label for="g7">Why is it good for that culture or religion?</label><input type="text" id="g7" placeholder="It is good because…"></section>
+<section class="part" id="H"><h3><span class="tag">Part H</span>Exit ticket</h3><label for="h1">1 new word I learned</label><input type="text" id="h1" placeholder=""><label for="h2">1 idea I remember</label><input type="text" id="h2" placeholder=""></section>
+
+<div class="lesson-head" id="lesson2"><h2>Lesson 2: What employers owe employees</h2><p>Chapter 6 | Parts I–S</p></div>
+<section class="part" id="I"><h3><span class="tag">Part I</span>Review quiz: Lesson 1</h3><p class="task">Choose the best answer. Then click Check.</p><div><div class="mc" data-answer="a"><p>1. A bribe is…</p><label><input type="radio" name="i1" value="a"> secret money to get an unfair advantage</label><label><input type="radio" name="i1" value="b"> a normal salary</label></div><div class="mc" data-answer="b"><p>2. Localization means…</p><label><input type="radio" name="i2" value="a"> one product, the same everywhere</label><label><input type="radio" name="i2" value="b"> changing a product for a local market</label></div><div class="mc" data-answer="a"><p>3. Shareholder primacy means a company’s first job is…</p><label><input type="radio" name="i3" value="a"> money for its owners</label><label><input type="radio" name="i3" value="b"> helping the town</label></div><div class="mc" data-answer="b"><p>4. Acculturation means…</p><label><input type="radio" name="i4" value="a"> learning your own culture as a child</label><label><input type="radio" name="i4" value="b"> learning a new culture when you move</label></div></div><div class="check-row"><button class="btn-gold" onclick="checkPart('I')">Check</button><span class="score" id="scoreI"></span></div></section>
+<section class="part" id="J"><h3><span class="tag">Part J</span>Vocabulary 2</h3><p class="task">Complete each sentence with a word from the box. Then click Check.</p><div class="bank"><span>wage</span><span>safety</span><span>harassment</span><span>discrimination</span><span>union</span><span>strike</span><span>privacy</span><span>monitor</span></div><div><div class="gap"><span class="n">1</span><div><p>Her ______ is $20 an hour.</p><input type="text" id="j1" data-answer="wage"></div></div><div class="gap"><span class="n">2</span><div><p>Workers wear helmets for ______.</p><input type="text" id="j2" data-answer="safety"></div></div><div class="gap"><span class="n">3</span><div><p>Treating someone worse because of their religion is ______.</p><input type="text" id="j3" data-answer="discrimination"></div></div><div class="gap"><span class="n">4</span><div><p>Unwanted touching or rude comments about someone’s body is ______.</p><input type="text" id="j4" data-answer="harassment"></div></div><div class="gap"><span class="n">5</span><div><p>The workers joined a ______ to negotiate together.</p><input type="text" id="j5" data-answer="union"></div></div><div class="gap"><span class="n">6</span><div><p>The workers stopped working. They went on ______.</p><input type="text" id="j6" data-answer="strike"></div></div><div class="gap"><span class="n">7</span><div><p>Some companies ______ workers’ emails.</p><input type="text" id="j7" data-answer="monitor"></div></div><div class="gap"><span class="n">8</span><div><p>A camera in the bathroom breaks people’s ______.</p><input type="text" id="j8" data-answer="privacy"></div></div></div><div class="check-row"><button class="btn-gold" onclick="checkPart('J')">Check</button><span class="score" id="scoreJ"></span></div></section>
+<section class="part" id="K"><h3><span class="tag">Part K</span>Good or bad workplace?</h3><p class="task">Choose good or bad. Then click Check.</p><div class="match"><p>1. Safe machines</p><select id="k1" data-answer="good"><option value="">Choose…</option><option value="good">Good</option><option value="bad">Bad</option></select><p>2. Fair pay for everyone</p><select id="k2" data-answer="good"><option value="">Choose…</option><option value="good">Good</option><option value="bad">Bad</option></select><p>3. A boss who yells at workers</p><select id="k3" data-answer="bad"><option value="">Choose…</option><option value="good">Good</option><option value="bad">Bad</option></select><p>4. Training for new workers</p><select id="k4" data-answer="good"><option value="">Choose…</option><option value="good">Good</option><option value="bad">Bad</option></select><p>5. Working with chemicals and no gloves</p><select id="k5" data-answer="bad"><option value="">Choose…</option><option value="good">Good</option><option value="bad">Bad</option></select><p>6. Treating a worker badly because of their religion</p><select id="k6" data-answer="bad"><option value="">Choose…</option><option value="good">Good</option><option value="bad">Bad</option></select></div><div class="check-row"><button class="btn-gold" onclick="checkPart('K')">Check</button><span class="score" id="scoreK"></span></div></section>
+<section class="part" id="L"><h3><span class="tag">Part L</span>Two laws that protect workers</h3><p class="task">True or false? Then click Check.</p><div><div class="tf mc" data-answer="t"><p>1. OSHA says employers must give a safe workplace.</p><div class="choices"><label><input type="radio" name="l1" value="t"> True</label><label><input type="radio" name="l1" value="f"> False</label></div></div><div class="tf mc" data-answer="f"><p>2. Workers must pay for their own safety gear.</p><div class="choices"><label><input type="radio" name="l2" value="t"> True</label><label><input type="radio" name="l2" value="f"> False</label></div></div><div class="tf mc" data-answer="t"><p>3. Under WARN, big companies must tell workers 60 days before many people lose their jobs.</p><div class="choices"><label><input type="radio" name="l3" value="t"> True</label><label><input type="radio" name="l3" value="f"> False</label></div></div><div class="tf mc" data-answer="f"><p>4. OSHA started in 2020.</p><div class="choices"><label><input type="radio" name="l4" value="t"> True</label><label><input type="radio" name="l4" value="f"> False</label></div></div></div><div class="check-row"><button class="btn-gold" onclick="checkPart('L')">Check</button><span class="score" id="scoreL"></span></div></section>
+<section class="part" id="M"><h3><span class="tag">Part M</span>Harassment at work</h3><p class="task">Choose the best answer. Then click Check.</p><p class="help" style="margin-bottom:10px">This topic can be hard. You do not need to share anything personal.</p><div><div class="mc" data-answer="b"><p>1. A coworker often tells jokes about women. Some people feel uncomfortable. What is this?</p><label><input type="radio" name="m1" value="a"> Just a normal joke</label><label><input type="radio" name="m1" value="b"> Possible harassment</label></div><div class="mc" data-answer="a"><p>2. A manager says: “Go on a date with me and I will give you a promotion.” What is this?</p><label><input type="radio" name="m2" value="a"> Harassment</label><label><input type="radio" name="m2" value="b"> OK if he is polite</label></div><div class="mc" data-answer="b"><p>3. A worker reports harassment. What should the company do?</p><label><input type="radio" name="m3" value="a"> Ignore it</label><label><input type="radio" name="m3" value="b"> Listen, check the facts, and act quickly</label></div></div><div class="check-row"><button class="btn-gold" onclick="checkPart('M')">Check</button><span class="score" id="scoreM"></span></div></section>
+<section class="part" id="N"><h3><span class="tag">Part N</span>Boss or leader?</h3><p class="task">Who does this? Then click Check.</p><div class="match"><p>1. Says “thank you”</p><select id="n1" data-answer="leader"><option value="">Choose…</option><option value="boss">A boss</option><option value="leader">A leader</option></select><p>2. Only gives orders</p><select id="n2" data-answer="boss"><option value="">Choose…</option><option value="boss">A boss</option><option value="leader">A leader</option></select><p>3. Asks for your ideas</p><select id="n3" data-answer="leader"><option value="">Choose…</option><option value="boss">A boss</option><option value="leader">A leader</option></select><p>4. Stays far from the team</p><select id="n4" data-answer="boss"><option value="">Choose…</option><option value="boss">A boss</option><option value="leader">A leader</option></select></div><div class="check-row"><button class="btn-gold" onclick="checkPart('N')">Check</button><span class="score" id="scoreN"></span></div><label for="n5">A good leader I had</label><input type="text" id="n5" placeholder="My best leader was… because…"></section>
+<section class="part" id="O"><h3><span class="tag">Part O</span>What is a fair wage?</h3><p class="task">Write numbers only. Then click Check.</p><div><label for="o1">1. $7.25 per hour × 40 hours = how much per week? ($)</label><input type="number" id="o1" data-answer="290"><label for="o2">2. $290 per week × 52 weeks = how much per year? ($)</label><input type="number" id="o2" data-answer="15080"><label for="o3">3. $15 per hour × 40 hours = how much per week? ($)</label><input type="number" id="o3" data-answer="600"></div><div class="check-row"><button class="btn-gold" onclick="checkPart('O')">Check</button><span class="score" id="scoreO"></span></div><div class="mc"><p>Is $7.25 an hour enough to live on?</p><div class="choices" style="flex-wrap:wrap"><label><input type="radio" name="o4" value="yes"> Yes</label><label><input type="radio" name="o4" value="no"> No</label></div></div><label for="o5">Which idea could work in the U.S.: Iceland’s equal pay law or the UK’s pay gap reports? Why?</label><input type="text" id="o5" placeholder="I think… because…"></section>
+<section class="part" id="P"><h3><span class="tag">Part P</span>Unions and strikes</h3><div class="mc"><p>Would you join a union?</p><div class="choices" style="flex-wrap:wrap"><label><input type="radio" name="p1" value="yes"> Yes</label><label><input type="radio" name="p1" value="no"> No</label><label><input type="radio" name="p1" value="not sure"> Not sure</label></div></div><label for="p2">Why?</label><input type="text" id="p2" placeholder="I would (not) join because…"></section>
+<section class="part" id="Q"><h3><span class="tag">Part Q</span>Can my boss watch me?</h3><p class="task">Choose. Then click Check.</p><div class="match"><p>1. Cameras in a store, with signs</p><select id="q1" data-answer="ok"><option value="">Choose…</option><option value="ok">Usually OK</option><option value="no">Not OK</option></select><p>2. Cameras in the bathroom</p><select id="q2" data-answer="no"><option value="">Choose…</option><option value="ok">Usually OK</option><option value="no">Not OK</option></select><p>3. A drug test for a bus driver</p><select id="q3" data-answer="ok"><option value="">Choose…</option><option value="ok">Usually OK</option><option value="no">Not OK</option></select><p>4. Listening to calls on a worker’s own phone</p><select id="q4" data-answer="no"><option value="">Choose…</option><option value="ok">Usually OK</option><option value="no">Not OK</option></select></div><div class="check-row"><button class="btn-gold" onclick="checkPart('Q')">Check</button><span class="score" id="scoreQ"></span></div><label for="q5">Gray area: should a boss check workers’ social media? Why?</label><input type="text" id="q5" placeholder="I think…"></section>
+<section class="part" id="R"><h3><span class="tag">Part R</span>Role-play: the jewelry store problem</h3><div class="reading"><p>You manage a jewelry store with 150 workers. Some expensive jewelry is missing. Your assistant managers want hidden cameras in the bathrooms and break room.</p></div><div class="mc"><p>Our choice</p><label><input type="radio" name="r1" value="a"> A. Hidden cameras in bathrooms</label><label><input type="radio" name="r1" value="b"> B. Cameras in the storage room, with signs</label><label><input type="radio" name="r1" value="c"> C. Better locks and checks</label><label><input type="radio" name="r1" value="d"> D. Do nothing</label></div><label for="r2">Why?</label><input type="text" id="r2" placeholder="We chose… because…"><label for="r3">How will you tell the workers?</label><input type="text" id="r3" placeholder="We will tell them…"></section>
+<section class="part" id="S"><h3><span class="tag">Part S</span>How do you feel about today?</h3><div class="mc"><p>I can explain how culture changes business.</p><div class="choices" style="flex-wrap:wrap"><label><input type="radio" name="s1" value="not yet"> Not yet</label><label><input type="radio" name="s1" value="ok"> OK</label><label><input type="radio" name="s1" value="yes!"> Yes!</label></div></div><div class="mc"><p>I can explain localization.</p><div class="choices" style="flex-wrap:wrap"><label><input type="radio" name="s2" value="not yet"> Not yet</label><label><input type="radio" name="s2" value="ok"> OK</label><label><input type="radio" name="s2" value="yes!"> Yes!</label></div></div><div class="mc"><p>I can name what employers owe workers.</p><div class="choices" style="flex-wrap:wrap"><label><input type="radio" name="s3" value="not yet"> Not yet</label><label><input type="radio" name="s3" value="ok"> OK</label><label><input type="radio" name="s3" value="yes!"> Yes!</label></div></div><div class="mc"><p>I can talk about privacy at work.</p><div class="choices" style="flex-wrap:wrap"><label><input type="radio" name="s4" value="not yet"> Not yet</label><label><input type="radio" name="s4" value="ok"> OK</label><label><input type="radio" name="s4" value="yes!"> Yes!</label></div></div><p class="help">Finished? Click <b>Print / PDF</b> at the top, choose “Save as PDF”, and send the file to your teacher.</p></section>
+
+</main>
+<footer><p>Approach International Student Center | Business Ethics</p>
+<button class="btn-ghost" onclick="resetAll()">Clear all my answers</button></footer>
+<script>
+const KEY = "approach-ethics-ch5-6-workbook-v1";
+const words1 = ["adapt","bribe","corruption","culture","custom","globalization","localization","value"];
+document.querySelectorAll('#A select').forEach(sel=>{
+  sel.innerHTML = '<option value="">Choose…</option>' + words1.map(w=>`<option>${w}</option>`).join('');
+});
+
+function fields(){ return document.querySelectorAll('input, textarea, select'); }
+function save(){
+  const data = {};
+  fields().forEach(el=>{
+    if(el.type==='radio'){ if(el.checked) data['r:'+el.name]=el.value; }
+    else if(el.id){ data[el.id]=el.value; }
+  });
+  try{ localStorage.setItem(KEY, JSON.stringify(data)); document.getElementById('saved').textContent='Saved'; }
+  catch(e){ document.getElementById('saved').textContent='Not saved: use Print to keep your work'; }
+}
+function load(){
+  let data = null;
+  try{ data = JSON.parse(localStorage.getItem(KEY) || 'null'); }catch(e){ data = null; }
+  if(!data) return;
+  fields().forEach(el=>{
+    if(el.type==='radio'){ if(data['r:'+el.name]===el.value) el.checked=true; }
+    else if(el.id && data[el.id]!==undefined){ el.value=data[el.id]; }
+  });
+}
+let t; document.addEventListener('input', ()=>{ clearTimeout(t); t=setTimeout(save,300); });
+document.addEventListener('change', save);
+load();
+
+function norm(v){ return String(v).trim().toLowerCase().replace(/[$,\s]+/g,' ').replace(/\s+/g,' ').trim(); }
+function mark(el, good){ el.classList.remove('ok','bad'); el.classList.add(good?'ok':'bad'); }
+
+function checkPart(id){
+  const part = document.getElementById(id);
+  let right=0, total=0;
+  part.querySelectorAll('[data-answer]').forEach(el=>{
+    if(el.classList.contains('mc')){
+      total++; const pick = el.querySelector('input:checked');
+      const good = pick && pick.value===el.dataset.answer;
+      el.querySelectorAll('label').forEach(l=>l.classList.remove('ok','bad'));
+      if(pick) mark(pick.closest('label'), good);
+      if(good) right++;
+    } else if(el.classList.contains('claim')){
+      total++; const pick = el.querySelector('input:checked'); const fb = el.querySelector('.fb');
+      const good = pick && pick.value===el.dataset.answer;
+      fb.textContent = (good?'Correct. ':(pick?'Not quite. ':'Choose an answer. ')) + (pick?el.dataset.why:'');
+      fb.className = 'fb show ' + (good?'good':'wrong');
+      if(good) right++;
+    } else {
+      total++;
+      const v = el.type==='number' ? el.value.replace(/[$,]/g,'') : el.value;
+      const good = norm(v)===norm(el.dataset.answer);
+      if(el.value!=='') mark(el, good); else el.classList.remove('ok','bad');
+      if(good) right++;
+    }
+  });
+  document.getElementById('score'+id).textContent = `${right} / ${total}`;
+  const fb = document.getElementById('fb'+id);
+  if(fb && right===total){ fb.className='fb show good'; }
+}
+function resetAll(){
+  if(!confirm('Clear all your answers on this device? This cannot be undone.')) return;
+  try{ localStorage.removeItem(KEY); }catch(e){}
+  location.reload();
+}
+</script>
+</body></html>
